@@ -133,7 +133,7 @@ export const updateAnimal = async(req,res) =>{
             })
         }
 
-        const updatedAnimal = await Animal.findByIdAndUpdate(req.params.id,{name, type, description, breed, gender, age, colour, vaccinated, address, city, country, adopted});
+        const updatedAnimal = await Animal.findByIdAndUpdate(req.params.id,{name, type, description, breed, gender, age, colour, vaccinated, address, city, country, adopted},{ new: true });
 
         res.status(200).send({ 
              success:true,

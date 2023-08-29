@@ -130,7 +130,7 @@ export const updateInjuredAnimal = async(req,res) =>{
             })
         }
 
-        const updatedInjuredAnimal = await InjuredAnimal.findByIdAndUpdate(req.params.id,{name, type, injurires, injuryDetail, breed, gender, address, city, country});
+        const updatedInjuredAnimal = await InjuredAnimal.findByIdAndUpdate(req.params.id,{name, type, injurires, injuryDetail, breed, gender, address, city, country},{ new: true });
 
         res.status(200).send({ 
              success:true,
