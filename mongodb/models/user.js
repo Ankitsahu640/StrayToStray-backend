@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
     avatar: { type: String },
     allAnimal: [{ type: mongoose.Schema.Types.ObjectId, ref: "Animal" }],
     allInjuredAnimal: [{ type: mongoose.Schema.Types.ObjectId, ref: "InjuredAnimal" }],
+    allDonation: [{type: mongoose.Schema.Types.ObjectId, ref: "Donation"}]
 });
 
 const userModel = mongoose.model("User", UserSchema);

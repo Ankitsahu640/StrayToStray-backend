@@ -7,6 +7,8 @@ import connectDB from "./mongodb/connect.js";
 import userRouter from "./routes/userRoute.js";
 import animalRouter from "./routes/animalRoute.js";
 import injuerdAnimalRouter from "./routes/injuredAnimalRoute.js";
+import sendMailRouter from "./routes/sendMailRoute.js";
+import donationRoute from "./routes/donationRoute.js";
 
 dotenv.config();
 
@@ -21,7 +23,9 @@ app.use(express.json());
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/animals", animalRouter);
-app.use("/api/v1/injuredAnimals",injuerdAnimalRouter)
+app.use("/api/v1/injuredAnimals",injuerdAnimalRouter);
+app.use("/api/v1/sendmail",sendMailRouter);
+app.use("/api/v1/donation",donationRoute);
 
 const startServer = async () => {
     try {
