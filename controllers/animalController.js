@@ -64,7 +64,7 @@ export const getAllAnimals = async (req, res) => {
         }
 
         const count = await Animal.countDocuments(query);
-        const lt = Number(limit) || 10;
+        const lt = Number(limit) || 50;
         const pe = Number(page) || 1;
         const skp = (pe - 1) * lt;
 
