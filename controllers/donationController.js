@@ -27,8 +27,8 @@ export const donate = async(req,res) => {
                   quantity: 1,
             }],
             mode:"payment",
-            success_url: `${process.env.CLIENT_URL}/checkout-success`,
-            cancel_url: `${process.env.CLIENT_URL}/checkout-cancel`,
+            success_url: `${process.env.CLIENT_URL}/success`,
+            cancel_url: `${process.env.CLIENT_URL}/cancel`,
         });
 
         console.log(session);
